@@ -56,7 +56,7 @@ app.get("/nft", async (req, res, next) => {
 });
 
 app.get("/setNFT", async (req, res, next) => {
-    const transaction = new ContractExecuteTransaction()
+    const transaction = new hg.ContractExecuteTransaction()
         .setContractId(newContractID)
         .setGas(100_000_000)
         .setFunction("setNFT", new hg.ContractFunctionParameters().addAddress(address).addString(req.params.newNFT))
