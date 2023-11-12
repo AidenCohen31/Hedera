@@ -61,17 +61,6 @@ app.get("/setNFT", async (req, res, next) => {
         .setContractId(newContractID)
         .setGas(100_000_000)
         .setFunction("setNFT", new hg.ContractFunctionParameters().addAddress(address).addString(req.params.newNFT))
-
-    //Sign with the client operator private key to pay for the transaction and submit the query to a Hedera network
-    const txResponse = await transaction.execute(client);
-
-    //Request the receipt of the transaction
-    const receipt = await txResponse.getReceipt(client);
-
-    //Get the transaction consensus status
-    const transactionStatus = receipt.status;
-
-    console.log("The transaction consensus status is " + transactionStatus);
     res.json({ "done": true })
 
 });
