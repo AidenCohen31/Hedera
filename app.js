@@ -56,12 +56,14 @@ app.get("/nft", async (req, res, next) => {
 });
 
 app.get("/setNFT", async (req, res, next) => {
-    console.log("The transaction consensus status is " + transactionStatus);
     const transaction = new ContractExecuteTransaction()
         .setContractId(newContractID)
         .setGas(100_000_000)
         .setFunction("setNFT", new hg.ContractFunctionParameters().addAddress(address).addString(req.params.newNFT))
-    res.json({ "done": true })
+    
+        const txResponse = await transaction.execute(client);
+
+        res.json({ "done": true })
 
 });
 
