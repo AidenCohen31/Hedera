@@ -1,0 +1,77 @@
+[
+{
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+},
+{
+    "inputs": [],
+    "name": "NFT",
+    "outputs": [
+        {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+        }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+},
+{
+    "inputs": [],
+    "name": "getNFT",
+    "outputs": [
+        {
+            "internalType": "string",
+            "name": "NFT_",
+            "type": "string"
+        }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+},
+{
+    "inputs": [],
+    "name": "leader",
+    "outputs": [
+        {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+        }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+},
+{
+    "inputs": [
+        {
+            "internalType": "address",
+            "name": "a",
+            "type": "address"
+        }
+    ],
+    "name": "seeMove",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+},
+{
+    "inputs": [
+        {
+            "internalType": "address",
+            "name": "a",
+            "type": "address"
+        },
+        {
+            "internalType": "string",
+            "name": "newFT",
+            "type": "string"
+        }
+    ],
+    "name": "setNFT",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}
+]
